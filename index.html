@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Log in</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Grupo 2</h1>
+      </div>
+      <nav>
+        <ul class="flexNavBar">
+          <li><a href="/grupos/grupos.html">Grupos</a></li>
+          <li><a href="/miembros/miembros.html">Miembros</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="login">
+      <section class="login_section">
+        <form class="login_form">
+          <h1 class="login_title">Ingrese su usuario Adviters:</h1>
+          <label for="email" class="label_login">
+            Correo:
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="field_login"
+              placeholder="Introduzca su correo..."
+            />
+          </label>
+          <label for="password" class="label_login"
+            >Contraseña:
+
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="field_login"
+              placeholder="Introduzca su contraseña..."
+            />
+          </label>
+          <input type="submit" value="Ingresar" id="btn_login" />
+          <span class="success"></span>
+          <span class="error"></span>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <h2 class="grupo">Made by</h2>
+      <div class="integrantes">
+        <span>Abril Aguero</span>
+        <span>Agustin Hernan Maciotta</span>
+        <span>Kevin Flores</span>
+      </div>
+    </footer>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
