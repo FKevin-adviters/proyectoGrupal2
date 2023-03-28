@@ -1,4 +1,4 @@
-import { fetchApi } from "../utils.js";
+import { fetchApi, checkUserLogged } from "../utils.js";
 
 let token;
 
@@ -54,7 +54,6 @@ const displayGrupos = (arrayGrupos) => {
 
 // chequeamos si tenemos el token de acceso en memoria
 const checkAccessToken = () => {
-  const error = document.getElementById("error1");
   const accessToken = localStorage.getItem("accessToken");
   if (accessToken) {
     fetchGrupos(JSON.parse(accessToken));
@@ -64,4 +63,5 @@ const checkAccessToken = () => {
   }
 };
 
+checkUserLogged();
 checkAccessToken();

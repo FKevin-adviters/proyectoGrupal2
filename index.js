@@ -1,4 +1,4 @@
-import { fetchApi } from "./utils.js";
+import { fetchApi, checkUserLogged } from "./utils.js";
 
 // seleccionamos el boton de ingresar para autenticar los datos ingresados por el
 // usuario
@@ -30,9 +30,8 @@ const fetchUser = async (email, password) => {
     localStorage.setItem("user", JSON.stringify(res));
     window.location.replace("/grupos/grupos.html");
   } else {
-    localStorage.setItem("accessToken", JSON.stringify({ accessToken: false }));
-    const error = document.getElementById("error");
-    error.innerText =
-      "No se ha podido ingresar a la cuenta, por favor ingrese nuevamente.";
+    alert("No se ha podido ingresar a la cuenta, anda pa allá bobo.");
   }
 };
+
+checkUserLogged();

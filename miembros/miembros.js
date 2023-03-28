@@ -1,3 +1,5 @@
+import { checkUserLogged } from "../utils.js";
+
 const displayMiembros = (arrayMiembros) => {
   const base = document.getElementById("miembros_list");
   return arrayMiembros.map((miembro) => {
@@ -45,4 +47,5 @@ const checkMiembros = () => {
   }
 };
 
+checkUserLogged();
 checkMiembros();

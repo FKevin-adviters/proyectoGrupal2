@@ -26,10 +26,15 @@ export { fetchApi };
 
 // chequea si tenemos el user del localstorage para poder renderizar en el navbar
 // el nombre e imagen si tiene
-// const checkUserLogged = () => {
-//   if (localStorage.getItem("user")) {
-//     return JSON.parse(localStorage.getItem("user"));
-//   } else {
-//     return false;
-//   }
-// };
+export const checkUserLogged = () => {
+  const user = localStorage.getItem("user");
+  if (user) {
+    const nav = document.getElementById("navbar");
+    const li = document.createElement("li");
+    li.innerText = JSON.parse(user)?.nombre;
+    nav.appendChild(li);
+    return JSON.parse(localStorage.getItem("user"));
+  } else {
+    return;
+  }
+};
